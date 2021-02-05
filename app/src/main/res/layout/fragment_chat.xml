@@ -19,24 +19,25 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="316dp"
             android:layout_height="55dp"
+            android:layout_gravity="center"
             android:layout_marginVertical="5dp"
             android:layout_marginStart="10dp"
             android:gravity="center"
-            android:layout_gravity="center"
-            android:hint="   Type here...">
+            android:hint=" Type here ..."
+            android:textColorHint="#F3D8D8">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_gravity="center"
-                android:textColor="@color/lightchatapp"
-
                 android:layout_height="match_parent"
-                android:ems="10" />
+                android:layout_gravity="center"
+
+                android:ems="10"
+                android:textColor="@color/lightchatapp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/button6"
+            android:id="@+id/send_button"
             android:layout_width="89dp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -55,7 +56,7 @@
 
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/large_textView"
         android:layout_width="409dp"
         android:layout_height="675dp"
         android:textColorHint="#F1B9B9"

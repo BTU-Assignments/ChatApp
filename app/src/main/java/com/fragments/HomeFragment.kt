@@ -26,6 +26,17 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
 
        button.setOnClickListener {
 
+           val action = HomeFragmentDirections.actionHomeFragmentToRegisterFragment()
+
+           navController.navigate(action)
+
+        }
+        button2.setOnClickListener {
+
+            val action2 = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
+
+            navController.navigate(action2)
+
         }
 
 

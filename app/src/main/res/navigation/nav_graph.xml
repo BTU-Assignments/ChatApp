@@ -4,33 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="UnusedNavigation"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/navigation_home">
 
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/navigation_home"
         tools:layout="@layout/fragment_home"
         android:name="com.fragments.HomeFragment"
         android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/navigation_register" />
         <action
             android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/navigation_Login" />
     </fragment>
     <fragment
-        android:id="@+id/registerFragment"
+        android:id="@+id/navigation_register"
         tools:layout="@layout/fragment_register"
         android:name="com.fragments.RegisterFragment"
-        android:label="RegisterFragment" />
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_Login"
+            app:destination="@id/navigation_Login" />
+    </fragment>
     <fragment
-        android:id="@+id/loginFragment"
+        android:id="@+id/navigation_Login"
         tools:layout="@layout/fragment_login"
         android:name="com.fragments.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_navigation_Login_to_navigation_chat"
+            app:destination="@id/navigation_chat" />
+    </fragment>
     <fragment
-        android:id="@+id/chatFragment"
+        android:id="@+id/navigation_chat"
         tools:layout="@layout/fragment_chat"
         android:name="com.fragments.ChatFragment"
         android:label="ChatFragment" />
